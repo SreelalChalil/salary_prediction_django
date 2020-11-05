@@ -1,0 +1,28 @@
+body{
+    background: #F7F7F7;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.card{
+background: white;
+}
+
+.main{
+  margin-top:3rem;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-itms: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+.result {
+font-weight: 400;
+font-size:2rem;
+}
