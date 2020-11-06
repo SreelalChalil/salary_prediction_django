@@ -4,7 +4,14 @@
     <div class="container main justify-content-center">
         <div class="col-sm-8">
          <div class="card">
-          <div class="card-header text-primary"><h5>Salary Prediction ML</h5></div>
+          <div class="card-header text-primary"><h5>Train Model</h5></div>
+          <div class="card-body">
+
+            <form action="{% url 'trainml' %}" method="post">
+              {% csrf_token %}
+              <button class="btn btn-primary">Train Model with New Dataset</button>
+            </form>
+          </div>
          <div class="card-body">
             
             {{test}}

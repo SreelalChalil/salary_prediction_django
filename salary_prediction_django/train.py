@@ -13,7 +13,7 @@ def convert_to_int(word):
         return word_dict[word]
 
 def train_model() :
-    file_path = os.path.join(settings.FILES_DIR, 'hiring.csv')
+    file_path = os.path.join(settings.MEDIA_ROOT, 'hiring.csv')
     dataset = pd.read_csv(file_path)
 
     dataset['experience'].fillna(0, inplace=True)

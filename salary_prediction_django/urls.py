@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('result/', views.result, name='result'),
     path('train/', views.trainml, name='trainml'),
+    path('upload/', views.upload, name='upload'),
 ]

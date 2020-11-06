@@ -1,0 +1,33 @@
+{% extends 'layout/layout.html' %}
+{% block content %}
+<section class="content">
+    <div class="container main justify-content-center">
+        <div class="col-sm-8">
+         <div class="card">
+          <div class="card-header text-primary"><h5>Upload New Dataset</h5></div>
+         <div class="card-body">
+        
+              <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                 <div class="form-group row">
+                   <label for="experience"  class="col-sm-3 col-form-label">Training Dataset</label>
+                   <input type="file" class="form-control col-sm-6" name="dataset" required="required">
+                 </div>
+                
+                 <button type="submit" class="btn btn-primary col-sm-4">Upload Dataset</button>
+           </form>
+         </div>
+       </div>
+       
+       {% if url %}
+          <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+         <strong>{{url}}</strong>
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+        {% endif %}
+        </div>
+        </div>
+</section>
+{% endblock %}
