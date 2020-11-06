@@ -31,3 +31,9 @@ def result(request):
     print(result)
     msg = "Your Salary Will be: " + str(result)
     return render(request, 'index.html', {'result':msg})
+
+
+def trainml(request):
+    from salary_prediction_django import train
+    x = train.train_model()
+    return render(request, 'train.html', {'test':x})

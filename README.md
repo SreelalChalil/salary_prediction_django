@@ -9,11 +9,11 @@
 
 ###  Create a python venv
 
-    python3.8 -m venv my_env
+    python3.8 -m venv djangoenv
 
 ###  Activate the virtual Environment
 
-    source my_env/bin/activate
+    source djangoenv/bin/activate
 
 ###  Install the required packages for out project using pip
 
