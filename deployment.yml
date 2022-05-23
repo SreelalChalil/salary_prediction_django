@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: salaryprediction
+  labels:
+    app: salarypredictiondjango
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: salarypredictiondjango
+  template:
+    metadata:
+      labels:
+        app: salarypredictiondjango
+    spec:
+      containers:
+        - image: sreelalc/salary_prediction_django:latest
+          name: salarypredictiondjango
+          ports:
+            - containerPort: 8000
+              name: gunicorn
